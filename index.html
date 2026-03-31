@@ -22,23 +22,64 @@
         </nav>
         <section>
             <div class="Card">
-                
-                <h2>Nova Consulta</h2>
-                <h3>Preencha seus dados para realizar os cálculos</h3>
-
+                <div class="novaConsulta">
+                    <h2>Nova Consulta</h2>
+                    <h3>Preencha seus dados para realizar os cálculos</h3>
+                </div>
+               
+                <div class="dadosCliente">
                 <label>Nome Completo</label>
                 <input type="text" id="Nome" class="nomeCliente" placeholder="Digite o nome" required>
-
-                <div class="caracteristicas">
-                    <label>Peso</label>
-                    <input type="int"
                 </div>
+                <div>
+                    <label>Sexo</label>
+                    <select id="Sexo" class="sexoCliente" required>
+                        <option value="">Selecione o sexo</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                    </select>
+
+                   </div>
+               
+                <div class="caracteristicas">
+                   <div>
+                    <label>Peso</label>
+                    <input type="number" id="Peso" class="pesoCliente" placeholder="70.0" required>
+                   </div>
+
+                    <div>
+                    <label>Altura</label>
+                    <input type="number" id="Altura" class="alturaCliente" placeholder="1.75" required>
+                    </div>
+
+                    <div>
+                    <label>Idade</label>
+                    <input type="number" id="Idade" class="idadeCliente" placeholder="30" required>
+                    </div>
+                </div>
+                <label>Objetivo</label>
+                <div class="objetivo"></div>
+                    
+                   
+                    <input type="radio" id="Deficit" class="Deficit" name="opcoesObj">
+                    <label for="Deficit">Perder Peso</label>
+
+                    <input type="radio" id="Manutenção" class="Manutenção" name="opcoesObj">
+                    <label for="Manutenção">Manter Peso</label>
+
+                    <input type="radio" id="Superavit" class="Superavit" name="opcoesObj">
+                    <label for="Superavit">Ganhar Massa Muscular</label>
+                </div>
+                <div class="enviar">    
+                      <button class="calcular" href="resultado.html">Calcular</button>
+                </div>
+              
             </div> 
         </section>
        
     </main>
     <footer>
-
+        <p>© 2026 NutriFit - Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>

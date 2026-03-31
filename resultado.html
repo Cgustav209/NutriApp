@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Nutricionista</title>
+    <link rel="stylesheet" href="./asserts/resultadoStlyles.css">
+    
+</head>
+<body>
+    <header class="cabecario">
+        <div class="textoHeader">
+         <h1>NutriFit</h1>
+         <h2>Seu asssistente de saúde e nutrição</h2>  
+        </div>
+       
+    </header>
+    <main>
+        <nav class="NavegacaoPaginas">
+            <a href="#" class="Consulta"></a>
+            <a href="#" class="Historico"></a>
+        </nav>
+        <section>
+            <div class="Card">
+                <div class="resultadoConsulta">
+                    <h2>Resultado da Consulta</h2>
+                    <h3>Confira os calculos realizados</h3>
+                </div>
+               
+                <div class="dadosCliente">
+                 <div>   
+                    <label>Nome</label>
+                    <label id="nomeResultado"> {nome} </label>
+                 </div>
+                  <div>
+                      <label>Peso</label>
+                      <label id="pesoResultado"> {peso} </label>
+                  </div>
+    
+                  <div>
+                      <label>Altura</label>
+                      <label id="alturaResultado"> {altura} </label>
+                  </div>
+    
+                  <div>
+                      <label>Idade</label>
+                      <label id="idadeResultado"> {idade} </label>
+                  </div>
+                </div>
+               
+                <div class="resultadosCalculos">
+                    <div class="IMC">
+                        <label>IMC</label>
+                        <label id="imcResultado"> {imc} </label>
+                    </div>
+                    <div class="aguaDiaria">
+                        <label>Água Diária</label>
+                        <label id="aguaResultado"> {agua} </label>
+                    </div>
+                    <div class="GastoCalorico">
+                        <label>Gasto Calórico Diário</label>
+                        <label id="gastoCaloricoResultado"> {gastoCalorico} </label>
+                        <label id="objetivoResultado"> {objetivo} </label>
+                    </div>
+                </div>
+               
+            
+                <div class="enviar">    
+                      <button class="Salvar">Salvar no Historico</button>
+                      <button class="NovaConsulta">Nova Consulta</button>
+                </div>
+              
+            </div> 
+        </section>
+       
+    </main>
+    <footer>
+        <p>© 2026 NutriFit - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
