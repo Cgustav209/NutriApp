@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Nutricionista</title>
+    <link rel="stylesheet" href="./asserts/homesStyles.css">
+</head>
+<body>
+     <header class="cabecario">
+       
+        <div class="textoHeader">
+         <h1>NutriFit</h1>
+         <h2>Seu asssistente de saúde e nutrição</h2>  
+        </div>
+       
+    </header>
+    <main>
+         <nav class="NavegacaoPaginas">
+            <a href="#" class="Consulta"></a>
+            <a href="#" class="Historico"></a>
+        </nav>
+        <section>
+            <div class="CardConsultas">
+                <div class="historicoConsulta">
+                    <h2>Historico de Consultas</h2>
+                    <h3> {consultas} consultas(s) registradas </h3>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="CardHistorico">
+                    <div class="dados usuario">
+                        <h2>{nome}</h2>
+                        <h3>idade: {idade} anos</h3>
+                    </div>
+                    <div class="dataConsulta">
+                        <img src="./asserts/calendar.png" alt="Icone de calendario">
+                        <h3>{data}</h3>
+                    </div>
+                  
+                    <div class="resultadosHistorico">
+                        <div class="imcHistorico">
+                            <label>IMC</label>             
+                            <div>
+                                 <label id="imcHistorico"> {imc} </label>
+                                 <label id="infoIMC"> {infoIMC} </label>
+                            </div>
+                        </div>
+                        <div class="aguaHistorico">
+                            <label>Água</label>
+                            <label id="aguaHistorico"> {agua} </label>
+                        </div>
+                        <div class="gastoHistorico">
+                            <label>Calórico</label>
+                            <label id="gastoHistorico"> {gasto} </label>
+                        </div>
+                    </div>   
+                    <hr>
+                    <div class="botoes">
+                        
+                    </div> 
+            </div>
+        </section>    
+    </main>
+
+</body>
