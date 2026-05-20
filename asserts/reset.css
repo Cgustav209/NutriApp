@@ -1,0 +1,78 @@
+/* ===== RESET ===== */
+/* Remove estilos padrões aplicados automaticamente pelo navegador */
+/* Garante consistência visual entre diferentes browsers */
+
+* {
+    margin: 0;
+    /* Remove margens padrão */
+
+    padding: 0;
+    /* Remove espaçamentos internos padrão */
+
+    box-sizing: border-box;
+    /* Faz com que padding e border sejam incluídos dentro da largura e altura total do elemento (facilita controle de layout) */
+
+    font-family: "Inter", sans-serif;
+    /* Define a fonte padrão do projeto */
+}
+
+:root{
+
+    /* =========================
+       CORES PRINCIPAIS
+    ========================== */
+
+    --color-primary: #4CAF50;
+    --color-primary-dark: #2E7D32;
+    --color-primary-light: #81C784;
+
+    /* =========================
+       BACKGROUNDS
+    ========================== */
+
+    --color-bg-page: #F4F7F1;
+    --color-bg-section: #E9F0E4;
+    --color-bg-card: #FFFFFF;
+    --color-bg-input: #FAFAFA;
+
+    /* =========================
+       TEXTOS
+    ========================== */
+
+    --color-text-title: #2F6B2F;
+    --color-text-primary: #3E7A3E;
+    --color-text-secondary: #6E8B6E;
+    --color-text-placeholder: #9AA59A;
+    --color-text-white: #FFFFFF;
+
+    /* =========================
+       BORDAS
+    ========================== */
+
+    --color-border: #CFE3CF;
+    --color-border-light: #DDEBDD;
+
+    /* =========================
+       BOTÕES
+    ========================== */
+
+    --color-button: #4CAF50;
+    --color-button-hover: #43A047;
+    --color-button-text: #FFFFFF;
+
+    /* =========================
+       SOMBRAS
+    ========================== */
+
+    --shadow-soft: 0 2px 8px rgba(76, 175, 80, 0.08);
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    /* =========================
+       STATUS / OBJETIVOS
+    ========================== */
+
+    --color-success: #66BB6A;
+    --color-warning: #FFA726;
+    --color-danger: #EF5350;
+
+}
