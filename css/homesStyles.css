@@ -1,0 +1,181 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  gap: 20px;
+  background-color: var(--color-bg-card);
+}
+
+.tituloCard {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 10px;
+
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 100;
+  }
+}
+/*===== FORMULARIO ======*/
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.nome {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Tipografia */
+  appearance: none;
+  -webkit-appearance: none;
+  color: var(--color-text-primary);
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.nomeInput {
+  width: 250px;
+  height: 55px;
+  border-radius: 10px;
+  padding: 0 16px;
+  border: 1px solid var(--color-border);
+}
+.nomeInput::placeholder {
+  color: var(--color-text-primary);
+}
+
+.dadosCliente {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  input {
+    width: 250px;
+    height: 55px;
+    border-radius: 10px;
+    padding: 0 16px;
+    border: 1px solid var(--color-border);
+  }
+  .dados {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 600;
+    appearance: none;
+    -webkit-appearance: none;
+    /* Tipografia */
+    color: var(--color-text-primary);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .dados::placeholder {
+    color: var(--color-text-primary);
+  }
+}
+.sexoCliente {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 250px;
+  height: 55px;
+  border-radius: 10px;
+  padding: 0 16px;
+  border: 1px solid var(--color-border);
+
+  /* Tipografia */
+  color: var(--color-text-primary);
+  font-size: 16px;
+  cursor: pointer;
+}
+.sexoCliente:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+/*======= OBJETIVO ======*/
+
+.objetivo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.objetivo label {
+  font-weight: 300;
+}
+/* Esconde a bolinha padrão do rádio */
+.objetivo input[type="radio"] {
+  display: none;
+}
+
+/*  Transforma o <label> no bloco visual principal */
+.objetivo input[type="radio"] + label {
+  display: block; /* Faz o label se comportar como um bloco preenchendo o espaço */
+  width: 250px;
+  padding: 16px;
+  border: 2px solid var(--color-border);
+  border-radius: 15px;
+  background-color: var(--color-bg-input);
+  color: var(--color-text-secondary);
+  text-align: center;
+  cursor: pointer; /* Muda a setinha do mouse para a mãozinha de clique */
+  font-weight: 500;
+  transition: all 0.2s ease-in-out; /* Deixa a transição de cor suave */
+}
+
+/* Efeito de Hover (quando passa o mouse por cima, antes de clicar) */
+.objetivo input[type="radio"]:not(:checked) + label:hover {
+  border-color: var(--color-primary);
+  background-color: var(--cor-bg);
+}
+
+/* Estilo de quando o bloco está SELECIONADO */
+.objetivo input[type="radio"]:checked + label {
+  border-color: var(--color-primary-ligh); /* Fica verde principal */
+  background-color: var(--color-primary-light); /* Fundo verdinho claro */
+  color: var(--color-text-primary); /* Texto verde escuro */
+  font-weight: bold;
+}
+
+/*======= Button ======*/
+button {
+  width: 250px;
+  height: 55px;
+
+  margin-top: 20px;
+
+  border: none;
+  border-radius: 16px;
+
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+  /* Suaviza efeito hover */
+}
+
+/*======= footer ======*/
+footer {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+  background-color: var(--color-bg-page);
+}
