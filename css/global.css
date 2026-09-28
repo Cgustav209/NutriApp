@@ -1,0 +1,137 @@
+:root {
+  /* =========================
+       CORES PRINCIPAIS
+    ========================== */
+
+  --color-primary: #4caf50;
+  --color-primary-dark: #2e7d32;
+  --color-primary-light: #f0f7e9;
+
+  /* =========================
+       BACKGROUNDS
+    ========================== */
+
+  --color-bg-page: #f4f7f1;
+  --color-bg-section: #e9f0e4;
+  --color-bg-card: #ffffff;
+  --color-bg-input: #fafafa;
+
+  /* =========================
+       TEXTOS
+    ========================== */
+
+  --color-text-title: #2f6b2f;
+  --color-text-primary: #3e7a3e;
+  --color-text-secondary: #6e8b6e;
+  --color-text-placeholder: #9aa59a;
+  --color-text-white: #ffffff;
+
+  /* =========================
+       BORDAS
+    ========================== */
+
+  --color-border: #cfe3cf;
+  --color-border-light: #ddebdd;
+
+  /* =========================
+       BOTÕES
+    ========================== */
+
+  --color-button: #4caf50;
+  --color-button-hover: #43a047;
+  --color-button-text: #ffffff;
+
+  /* =========================
+       SOMBRAS
+    ========================== */
+
+  --shadow-soft: 0 2px 8px rgba(76, 175, 80, 0.08);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  /* =========================
+       STATUS / OBJETIVOS
+    ========================== */
+
+  --color-success: #66bb6a;
+  --color-warning: #ffa726;
+  --color-danger: #ef5350;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-primary-light);
+  color: var(--color-text-primary);
+  font-family: inherit;
+}
+
+.cabecario {
+  background-color: var(--color-bg-card);
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  padding: 10px;
+  align-items: center;
+}
+
+.textoHeader {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 12px;
+    font-weight: 100;
+  }
+}
+
+/* 1. O contentor branco (caixa principal) */
+.navegacaoPaginas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-card); /* Fundo branco */
+  padding: 8px;
+  border-radius: 12px;
+  width: fit-content; /* Impede que a caixa ocupe o ecrã todo */
+  margin: 0 auto 30px auto;
+  gap: 10px;
+}
+
+/*Limpeza das divs internas (remove bordas pretas indesejadas) */
+.navegacaoPaginas div {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo base dos botões (fundo transparente e texto verde) */
+.navegacaoPaginas div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--color-primary-dark);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilo do texto com quebra de linha ajustada */
+.navegacaoPaginas div a .texto {
+  line-height: 1.2;
+}
+
+/* Apenas o botão ATIVO fica verde com texto branco */
+.navegacaoPaginas div.ativo a {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+}

@@ -1,89 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sabor Nutricionista</title>
-    <link rel="stylesheet" href="./asserts/reset.css">
-    <link rel="stylesheet" href="./asserts/homesStyles.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/homesStyles.css" />
+  </head>
+  <body>
     <header class="cabecario">
-        <div class="textoHeader">
-         <h1>NutriFit</h1>
-         <h2>Seu asssistente de saúde e nutrição</h2>  
-        </div>
-       
+      <!--================= Logo ============ -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+        class="logo"
+        width="50"
+        height="50"
+      >
+        <!-- Fundo verde com cantos arredondados usando a sua cor principal -->
+        <rect width="100" height="100" rx="24" fill="var(--color-primary)" />
+
+        <!-- Linha do batimento cardíaco branca -->
+        <polyline
+          points="25,52 38,52 46,28 58,75 65,52 75,52"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <div class="textoHeader">
+        <h1>NutriFit</h1>
+        <h2>Seu asssistente de saúde e nutrição</h2>
+      </div>
     </header>
     <main>
-        <nav class="NavegacaoPaginas">
-            <a href="#" class="Consulta"></a>
-            <a href="#" class="Historico"></a>
-        </nav>
-        <section>
-            <div class="Card">
-                <div class="novaConsulta">
-                    <h2>Nova Consulta</h2>
-                    <h3>Preencha seus dados para realizar os cálculos</h3>
-                </div>
-               <form>
-                    <div class="dadosCliente">
-                        <label>Nome Completo</label>
-                        <input type="text" id="Nome" class="nomeCliente" placeholder="Digite o nome" required>
-                    </div>
-                    <div>
-                        <label>Sexo</label>
-                        <select id="Sexo" class="sexoCliente" required>
-                            <option value="">Selecione o sexo</option>
-                            <option value="Masculino">Masculino</option>
-                            <option value="Feminino">Feminino</option>
-                        </select>
+      <nav class="navegacaoPaginas">
+        <div class="ativo">
+          <!-- Como já está na Nova Consulta, pode apontar para a própria página ou index.html -->
+          <a href="./index.html" class="Consulta">
+            <span class="texto">Nova<br />Consulta</span>
+          </a>
+        </div>
 
-                    </div>
-                
-                    <div class="caracteristicas">
-                    
-                        <div>
-                            <label>Peso</label>
-                            <input type="number" id="Peso" class="pesoCliente" placeholder="70.0" required>
-                        </div>
+        <div>
+          <!-- Substitua o "#" pelo caminho da página de histórico -->
+          <a href="./historico.html" class="Historico">
+            <span class="texto">Histórico</span>
+          </a>
+        </div>
+      </nav>
+      <section>
+        <div class="Card">
+          <div class="tituloCard">
+            <h2>Nova Consulta</h2>
+            <h3>Preencha seus dados para realizar os cálculos</h3>
+          </div>
+          <form>
+            <div class="nome">
+              <label>Nome Completo</label>
+              <input
+                type="text"
+                id="Nome"
+                class="nomeInput"
+                placeholder="Digite o nome"
+                required
+              />
+            </div>
 
-                        <div>
-                        <label>Altura</label>
-                        <input type="number" id="Altura" class="alturaCliente" placeholder="1.75" required>
-                        </div>
+            <div class="dadosCliente">
+              <div>
+                <label>Sexo</label>
+                <select id="Sexo" class="sexoCliente" required>
+                  <option value="">Selecione o sexo</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Feminino">Feminino</option>
+                </select>
+              </div>
+              <div>
+                <label>Nível de Atividade</label>
+                <select id="Atividade" class="sexoCliente" required>
+                  <option value="">Selecione a atividade</option>
+                  <option value="1.2">
+                    Sedentário (pouco ou nenhum exercício)
+                  </option>
+                  <option value="1.375">
+                    Levemente ativo (exercício 1 a 3 dias/sem)
+                  </option>
+                  <option value="1.55">
+                    Moderadamente ativo (exercício 3 a 5 dias/sem)
+                  </option>
+                  <option value="1.725">
+                    Muito ativo (exercício 6 a 7 dias/sem)
+                  </option>
+                  <option value="1.9">
+                    Extremamente ativo (atleta ou trabalho braçal pesadíssimo)
+                  </option>
+                </select>
+              </div>
+              <div class="dados">
+                <label>Peso (kg)</label>
+                <input type="number" id="Peso" placeholder="70.0" required />
+              </div>
 
-                        <div>
-                        <label>Idade</label>
-                        <input type="number" id="Idade" class="idadeCliente" placeholder="30" required>
-                        </div>
-                    </div>
-                </form>   
-                <label>Objetivo</label>
-                <div class="objetivo"></div>
-                    
-                   
-                    <input type="radio" id="Deficit" class="Deficit" name="opcoesObj">
-                    <label for="Deficit">Perder Peso</label>
+              <div class="dados">
+                <label>Altura (cm)</label>
+                <input
+                  type="number"
+                  id="Altura"
+                  placeholder="175"
+                  min="50"
+                  max="350"
+                  required
+                />
+              </div>
 
-                    <input type="radio" id="Manutenção" class="Manutenção" name="opcoesObj">
-                    <label for="Manutenção">Manter Peso</label>
+              <div class="dados">
+                <label>Idade</label>
+                <input type="number" id="Idade" placeholder="30" required />
+              </div>
+            </div>
+          </form>
 
-                    <input type="radio" id="Superavit" class="Superavit" name="opcoesObj">
-                    <label for="Superavit">Ganhar Massa Muscular</label>
-                </div>
-                <div class="enviar">    
-                        <button href="./resultado.html" class="calcular" onclick="calcularResultados()">Calcular</button>
-                      <!-- <button type="submit" class="calcular" onclick="calcularResultados()">Calcular</button> -->
-                </div>
-              
-            </div> 
-        </section>
-       
+          <div class="objetivo">
+            <label>Objetivo</label>
+            <div>
+              <input
+                type="radio"
+                id="Deficit"
+                class="Deficit"
+                name="opcoesObj"
+              />
+              <label for="Deficit">Perder Peso</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="Manutencao"
+                class="Manutencao"
+                name="opcoesObj"
+              />
+              <label for="Manutencao">Manter Peso</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="Superavit"
+                class="Superavit"
+                name="opcoesObj"
+              />
+              <label for="Superavit">Ganhar Massa Muscular</label>
+            </div>
+          </div>
+          <div class="enviar">
+            <button
+              type="button"
+              class="botao"
+              onclick="calcularResultados(event)"
+            >
+              Calcular
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>© 2026 NutriFit - Todos os direitos reservados.</p>
+      <p>NutriFit © 2026 - Controle seus dados corporais e nutricionais.</p>
     </footer>
-</body>
+    <script src="./js/home.js" defer></script>
+  </body>
 </html>
