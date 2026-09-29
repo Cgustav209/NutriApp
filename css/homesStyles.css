@@ -8,6 +8,8 @@
   border-radius: 15px;
   gap: 20px;
   background-color: var(--color-bg-card);
+
+  box-shadow: 0 4px 12px rgba(17, 148, 0, 0.1);
 }
 
 .tituloCard {
@@ -58,6 +60,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-weight: 600;
 
   input {
     width: 250px;
@@ -70,7 +73,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-weight: 600;
+
     appearance: none;
     -webkit-appearance: none;
     /* Tipografia */
@@ -110,7 +113,7 @@ form {
   gap: 15px;
 }
 .objetivo label {
-  font-weight: 300;
+  font-weight: 200;
 }
 /* Esconde a bolinha padrão do rádio */
 .objetivo input[type="radio"] {
@@ -166,16 +169,4 @@ button {
 
   transition: 0.3s;
   /* Suaviza efeito hover */
-}
-
-/*======= footer ======*/
-footer {
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
-  text-align: center;
-  font-size: 12px;
-  padding: 20px;
-  background-color: var(--color-bg-page);
 }

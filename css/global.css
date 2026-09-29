@@ -1,25 +1,22 @@
 :root {
   /* =========================
-       CORES PRINCIPAIS
-    ========================== */
-
+        CORES PRINCIPAIS
+     ========================== */
   --color-primary: #4caf50;
   --color-primary-dark: #2e7d32;
   --color-primary-light: #f0f7e9;
 
   /* =========================
-       BACKGROUNDS
-    ========================== */
-
-  --color-bg-page: #f4f7f1;
+        BACKGROUNDS
+     ========================== */
+  --color-bg-page: #f1f8e9;
   --color-bg-section: #e9f0e4;
   --color-bg-card: #ffffff;
   --color-bg-input: #fafafa;
 
   /* =========================
-       TEXTOS
-    ========================== */
-
+        TEXTOS
+     ========================== */
   --color-text-title: #2f6b2f;
   --color-text-primary: #3e7a3e;
   --color-text-secondary: #6e8b6e;
@@ -27,31 +24,27 @@
   --color-text-white: #ffffff;
 
   /* =========================
-       BORDAS
-    ========================== */
-
+        BORDAS
+     ========================== */
   --color-border: #cfe3cf;
   --color-border-light: #ddebdd;
 
   /* =========================
-       BOTÕES
-    ========================== */
-
+        BOTÕES
+     ========================== */
   --color-button: #4caf50;
   --color-button-hover: #43a047;
   --color-button-text: #ffffff;
 
   /* =========================
-       SOMBRAS
-    ========================== */
-
+        SOMBRAS
+     ========================== */
   --shadow-soft: 0 2px 8px rgba(76, 175, 80, 0.08);
   --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
 
   /* =========================
-       STATUS / OBJETIVOS
-    ========================== */
-
+        STATUS / OBJETIVOS
+     ========================== */
   --color-success: #66bb6a;
   --color-warning: #ffa726;
   --color-danger: #ef5350;
@@ -60,51 +53,69 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background-color: var(--color-primary-light);
   color: var(--color-text-primary);
-  font-family: inherit;
+  padding-top: 120px;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
-.cabecario {
-  background-color: var(--color-bg-card);
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /*desfoque*/
+  background-color: rgba(255, 255, 255, 0.8);
+
+  backdrop-filter: blur(8px);
+
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
-  padding: 10px;
+  padding: 10px 15px;
   align-items: center;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
 }
 
 .textoHeader {
   display: flex;
   flex-direction: column;
   margin: 10px;
-
-  h1 {
-    font-size: 30px;
-    font-weight: bold;
-  }
-  h2 {
-    font-size: 12px;
-    font-weight: 100;
-  }
 }
 
-/* 1. O contentor branco (caixa principal) */
+.textoHeader h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-text-title);
+}
+
+.textoHeader h2 {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+/* Container de navegação */
 .navegacaoPaginas {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  background-color: var(--color-bg-card); /* Fundo branco */
-  padding: 8px;
+  justify-content: center; /* Corrigido de 's' para 'center' */
+  background-color: var(--color-bg-card);
+  width: 20px;
+  height: 90px;
+  padding: 5px;
   border-radius: 12px;
-  width: fit-content; /* Impede que a caixa ocupe o ecrã todo */
-  margin: 0 auto 30px auto;
+  width: fit-content;
+  margin: 20px auto 30px auto;
   gap: 10px;
+  box-shadow: 0 1px 10px rgba(17, 148, 0, 0.1);
 }
 
-/*Limpeza das divs internas (remove bordas pretas indesejadas) */
 .navegacaoPaginas div {
   background: none;
   border: none;
@@ -112,26 +123,39 @@ body {
   margin: 0;
 }
 
-/* Estilo base dos botões (fundo transparente e texto verde) */
 .navegacaoPaginas div a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 24px;
-  border-radius: 8px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  gap: 8px;
   text-decoration: none;
   color: var(--color-primary-dark);
   font-weight: bold;
-  text-align: center;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
-/* Estilo do texto com quebra de linha ajustada */
 .navegacaoPaginas div a .texto {
   line-height: 1.2;
 }
 
-/* Apenas o botão ATIVO fica verde com texto branco */
+/* Botão ativo */
 .navegacaoPaginas div.ativo a {
   background-color: var(--color-primary);
   color: var(--color-text-white);
+}
+
+/*======= footer ======*/
+footer {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+  background-color: var(--color-bg-card);
 }

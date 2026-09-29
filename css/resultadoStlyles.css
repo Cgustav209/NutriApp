@@ -1,0 +1,50 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  gap: 20px;
+  background-color: var(--color-bg-card);
+
+  box-shadow: 0 4px 12px rgba(17, 148, 0, 0.1);
+}
+.tituloCard {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 10px;
+
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 100;
+  }
+}
+
+/*======= Button ======*/
+button {
+  width: 250px;
+  height: 55px;
+
+  margin-top: 20px;
+
+  border: none;
+  border-radius: 16px;
+
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+  /* Suaviza efeito hover */
+}
